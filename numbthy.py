@@ -280,6 +280,36 @@ def isprimitive(g,n):
 	# SAGE equivalent is mod(g,n).is_primitive_root() in IntegerMod class
 	return is_primitive_root(g,n)
 
+###############################################################
+# Addiional functions:
+# mu(n): Calculate the mu function (0 is n divide a square, (-1)^k if not divive a square, k is the
+# count of divisors of a)
+###############################################################
+
+#Retun mu function according n 
+def  mu(n):
+    pass
+
+def is_prime_lucas_lehmer(p):
+# There is a specialized test for primality of Mersenne numbers called the
+# Lucas-Lehmer test. This remarkably simple algorithm determines provably
+# correctly whether or not a number 2p − 1 is prime. We implement it in a
+# few lines of code and use the Lucas-Lehmer test to check for primality of
+# two Mersenne numbers:
+    s = Mod(4, 2^p - 1)
+    for i in range(3, p+1):
+        s = s^2 - 2
+        return s == 0
+
+def legendre_symbol(n,p):
+    pass
+
+def is_square(n):
+    pass
+
+   
+     
+
 # 26 Mar 2007 - ver 0.4
 #   Correct error in xgcd().
 # 27 Apr 2007 - ver 0.41

@@ -58,6 +58,12 @@ class Test_numbthy(unittest.TestCase):
     def test_factor(self):
         for testcase in ((-15,((3, 1), (5, 1))),(1234561000,((2, 3), (5, 3), (211, 1), (5851, 1)))):
             self.assertEqual(numbthy.factor(testcase[0]),testcase[1])
+            
+    def test_mu(n):
+        for  testcase in ((1,1),(2,-1),(3,-1),(4,0),(5,-1),(6,1),(7,-1),(8,0),(9,0),(10,1),(11,1),(12,0)):
+            self.assertEqual(numbthy.mu(testcase[0]),testcase[1])
+        
+    
 
 if __name__ == '__main__':
     unittest.main()
